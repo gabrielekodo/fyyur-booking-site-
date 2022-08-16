@@ -1,0 +1,354 @@
+
+2022-08-12 12:56:18,496 INFO: errors [in /home/gabriel/Desktop/FSND/projects/01_fyyur/starter_code/app.py:532]
+2022-08-12 14:58:02,633 INFO: errors [in /home/gabriel/Desktop/fyyur-project-2022/app.py:533]
+2022-08-12 14:58:24,408 INFO: errors [in /home/gabriel/Desktop/fyyur-project-2022/app.py:533]
+2022-08-12 14:59:14,323 INFO: errors [in /home/gabriel/Desktop/fyyur-project-2022/app.py:533]
+2022-08-12 15:10:38,899 INFO: errors [in /home/gabriel/Desktop/fyyur-project-2022/app.py:487]
+2022-08-12 17:58:48,372 INFO: errors [in /home/gabriel/Desktop/fyyur-project-2022/app.py:489]
+2022-08-12 18:00:42,389 INFO: errors [in /home/gabriel/Desktop/fyyur-project-2022/app.py:492]
+2022-08-12 18:01:00,691 ERROR: Exception on /shows [GET] [in /home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask/app.py:1449]
+Traceback (most recent call last):
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x7f98eb55e140 (otid=0x7f98eb565b00) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/gabriel/Desktop/fyyur-project-2022/app.py", line 421, in shows
+    shows = Show.query.all()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 514, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/orm/scoping.py", line 47, in __call__
+    sess = self.registry()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 4225, in __call__
+    return self.class_(**local_kw)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 138, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 943, in engine
+    return self.get_engine()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 962, in get_engine
+    return connector.get_engine()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 556, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 972, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "<string>", line 2, in create_engine
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/deprecations.py", line 309, in warned
+    return fn(*args, **kwargs)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 534, in create_engine
+    entrypoint = u._get_entrypoint()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/engine/url.py", line 655, in _get_entrypoint
+    cls = registry.load(name)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 343, in load
+    raise exc.NoSuchModuleError(
+sqlalchemy.exc.NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:postgres
+2022-08-12 18:01:09,155 ERROR: Exception on /venues [GET] [in /home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask/app.py:1449]
+Traceback (most recent call last):
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x7f98ea4cc0f0 (otid=0x7f98ea4d9bc0) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/gabriel/Desktop/fyyur-project-2022/app.py", line 93, in venues
+    venues = Venue.query.all()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 514, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/orm/scoping.py", line 47, in __call__
+    sess = self.registry()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 4225, in __call__
+    return self.class_(**local_kw)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 138, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 943, in engine
+    return self.get_engine()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 962, in get_engine
+    return connector.get_engine()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 556, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 972, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "<string>", line 2, in create_engine
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/deprecations.py", line 309, in warned
+    return fn(*args, **kwargs)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 534, in create_engine
+    entrypoint = u._get_entrypoint()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/engine/url.py", line 655, in _get_entrypoint
+    cls = registry.load(name)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 343, in load
+    raise exc.NoSuchModuleError(
+sqlalchemy.exc.NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:postgres
+2022-08-12 18:01:31,143 ERROR: Exception on /shows/create [POST] [in /home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask/app.py:1449]
+Traceback (most recent call last):
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x7f98eb59ba00 (otid=0x7f98ea4ad340) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gabriel/Desktop/fyyur-project-2022/app.py", line 458, in create_show_submission
+    db.session.add(show_to_enlist)
+  File "<string>", line 2, in add
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/orm/scoping.py", line 24, in _proxied
+    return self.registry()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 4225, in __call__
+    return self.class_(**local_kw)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 138, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 943, in engine
+    return self.get_engine()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 962, in get_engine
+    return connector.get_engine()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 556, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 972, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "<string>", line 2, in create_engine
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/deprecations.py", line 309, in warned
+    return fn(*args, **kwargs)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 534, in create_engine
+    entrypoint = u._get_entrypoint()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/engine/url.py", line 655, in _get_entrypoint
+    cls = registry.load(name)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 343, in load
+    raise exc.NoSuchModuleError(
+sqlalchemy.exc.NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:postgres
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x7f98eb59ba00 (otid=0x7f98ea4ad340) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gabriel/Desktop/fyyur-project-2022/app.py", line 465, in create_show_submission
+    db.session.rollback()
+  File "<string>", line 2, in rollback
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/orm/scoping.py", line 24, in _proxied
+    return self.registry()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 4225, in __call__
+    return self.class_(**local_kw)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 138, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 943, in engine
+    return self.get_engine()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 962, in get_engine
+    return connector.get_engine()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 556, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 972, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "<string>", line 2, in create_engine
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/deprecations.py", line 309, in warned
+    return fn(*args, **kwargs)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 534, in create_engine
+    entrypoint = u._get_entrypoint()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/engine/url.py", line 655, in _get_entrypoint
+    cls = registry.load(name)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 343, in load
+    raise exc.NoSuchModuleError(
+sqlalchemy.exc.NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:postgres
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x7f98eb59ba00 (otid=0x7f98ea4ad340) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/gabriel/Desktop/fyyur-project-2022/app.py", line 469, in create_show_submission
+    db.session.close()
+  File "<string>", line 2, in close
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/orm/scoping.py", line 24, in _proxied
+    return self.registry()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 4225, in __call__
+    return self.class_(**local_kw)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 138, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 943, in engine
+    return self.get_engine()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 962, in get_engine
+    return connector.get_engine()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 556, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 972, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "<string>", line 2, in create_engine
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/deprecations.py", line 309, in warned
+    return fn(*args, **kwargs)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 534, in create_engine
+    entrypoint = u._get_entrypoint()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/engine/url.py", line 655, in _get_entrypoint
+    cls = registry.load(name)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 343, in load
+    raise exc.NoSuchModuleError(
+sqlalchemy.exc.NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:postgres
+2022-08-12 18:24:07,594 ERROR: Exception on /shows/create [POST] [in /home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask/app.py:1449]
+Traceback (most recent call last):
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x7f98eb59bed0 (otid=0x7f98e81fc800) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gabriel/Desktop/fyyur-project-2022/app.py", line 458, in create_show_submission
+    db.session.add(show_to_enlist)
+  File "<string>", line 2, in add
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/orm/scoping.py", line 24, in _proxied
+    return self.registry()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 4225, in __call__
+    return self.class_(**local_kw)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 138, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 943, in engine
+    return self.get_engine()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 962, in get_engine
+    return connector.get_engine()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 556, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 972, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "<string>", line 2, in create_engine
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/deprecations.py", line 309, in warned
+    return fn(*args, **kwargs)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 534, in create_engine
+    entrypoint = u._get_entrypoint()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/engine/url.py", line 655, in _get_entrypoint
+    cls = registry.load(name)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 343, in load
+    raise exc.NoSuchModuleError(
+sqlalchemy.exc.NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:postgres
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x7f98eb59bed0 (otid=0x7f98e81fc800) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gabriel/Desktop/fyyur-project-2022/app.py", line 465, in create_show_submission
+    db.session.rollback()
+  File "<string>", line 2, in rollback
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/orm/scoping.py", line 24, in _proxied
+    return self.registry()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 4225, in __call__
+    return self.class_(**local_kw)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 138, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 943, in engine
+    return self.get_engine()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 962, in get_engine
+    return connector.get_engine()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 556, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 972, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "<string>", line 2, in create_engine
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/deprecations.py", line 309, in warned
+    return fn(*args, **kwargs)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 534, in create_engine
+    entrypoint = u._get_entrypoint()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/engine/url.py", line 655, in _get_entrypoint
+    cls = registry.load(name)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 343, in load
+    raise exc.NoSuchModuleError(
+sqlalchemy.exc.NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:postgres
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x7f98eb59bed0 (otid=0x7f98e81fc800) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/gabriel/Desktop/fyyur-project-2022/app.py", line 469, in create_show_submission
+    db.session.close()
+  File "<string>", line 2, in close
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/orm/scoping.py", line 24, in _proxied
+    return self.registry()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 4225, in __call__
+    return self.class_(**local_kw)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 138, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 943, in engine
+    return self.get_engine()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 962, in get_engine
+    return connector.get_engine()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 556, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/flask_sqlalchemy/__init__.py", line 972, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "<string>", line 2, in create_engine
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/deprecations.py", line 309, in warned
+    return fn(*args, **kwargs)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 534, in create_engine
+    entrypoint = u._get_entrypoint()
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/engine/url.py", line 655, in _get_entrypoint
+    cls = registry.load(name)
+  File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 343, in load
+    raise exc.NoSuchModuleError(
+sqlalchemy.exc.NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:postgres
