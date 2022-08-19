@@ -352,3 +352,7 @@ Traceback (most recent call last):
   File "/home/gabriel/Desktop/fyyur-project-2022/env/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 343, in load
     raise exc.NoSuchModuleError(
 sqlalchemy.exc.NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:postgres
+2022-08-19 13:48:41,264 INFO: errors [in /home/gabriel/Desktop/gabrielekodo-fyyur-booking-site-240f28f/app.py:570]
+2022-08-19 13:48:42,517 INFO: errors [in /home/gabriel/Desktop/gabrielekodo-fyyur-booking-site-240f28f/app.py:570]
+2022-08-19 13:49:43,523 INFO: errors [in /home/gabriel/Desktop/gabrielekodo-fyyur-booking-site-240f28f/app.py:570]
+2022-08-19 13:49:45,457 INFO: errors [in /home/gabriel/Desktop/gabrielekodo-fyyur-booking-site-240f28f/app.py:569]

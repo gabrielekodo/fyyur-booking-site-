@@ -51,14 +51,14 @@ db = db_setup(app)
 # TODO: connect to a local postgresql database
 app.config['SECRET_KEY'] = SECRET_KEY
 
-ENV = 'dev'
+ENV = 'prod'
 
 if ENV == 'dev':
     app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = DEBUG
     app.debug = True
 else:
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://pcomcamhrqkpnd:77c423643c0ae216b9f338ed6b35b61569e0680c3e02726d30fe306feb0e34d3@ec2-34-193-44-192.compute-1.amazonaws.com:5432/dfki6t2esqesil'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://pcomcamhrqkpnd:77c423643c0ae216b9f338ed6b35b61569e0680c3e02726d30fe306feb0e34d3@ec2-34-193-44-192.compute-1.amazonaws.com:5432/dfki6t2esqesil'
     app.debug = False
 #----------------------------------------------------------------------------#
 # Models.
@@ -313,7 +313,6 @@ def show_artist(artist_id):
     current_time = datetime.now()
     past_shows_query = db.session.query(Show).join(Artist).filter(
         Show.artist_id == artist_id).filter(Show.start_time < datetime.now()).all()
-
 
     past_shows = []
     for show in past_shows_query:
