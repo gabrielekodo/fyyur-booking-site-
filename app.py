@@ -42,6 +42,7 @@ from config import *
 
 app = Flask(__name__)
 moment = Moment(app)
+app.config['SECRET_KEY'] = SECRET_KEY
 db = db_setup(app)
 # app = Flask(__name__)
 # moment = Moment(app)
@@ -49,7 +50,7 @@ db = db_setup(app)
 # db = SQLAlchemy(app)
 # migrate = Migrate(app, db)
 # TODO: connect to a local postgresql database
-app.config['SECRET_KEY'] = SECRET_KEY
+
 
 ENV = 'prod'
 
@@ -60,6 +61,7 @@ if ENV == 'dev':
 else:
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://pcomcamhrqkpnd:77c423643c0ae216b9f338ed6b35b61569e0680c3e02726d30fe306feb0e34d3@ec2-34-193-44-192.compute-1.amazonaws.com:5432/dfki6t2esqesil'
     app.debug = False
+    
 #----------------------------------------------------------------------------#
 # Models.
 #----------------------------------------------------------------------------#
